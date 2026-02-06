@@ -11,4 +11,5 @@ jobs:
           node-version: '20'
       - run: npm install -g bats
       - run: bats -v
+      - run: echo "https://console.scitix.ai/siverse/workloads/detail?uuid=d3a6f0aa-1a2a-40a6-80ff-f6b77393e1d7&region=us-east&cluster=cetus&status=Pending"
 
