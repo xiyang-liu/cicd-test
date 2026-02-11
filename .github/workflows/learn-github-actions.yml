@@ -1,9 +1,6 @@
 name: learn-github-actions
 run-name: ${{ github.actor }} is learning GitHub Actions
 on:
-  push:
-    branches:
-      - '**'
   workflow_dispatch:
     inputs:
       AK:
@@ -22,7 +19,7 @@ jobs:
           node-version: '20'
       - run: |
           echo ${{ inputs.AK }}
-          echo ${{inputs.SK }}
+          echo ${{ inputs.SK }}
       - run: npm install -g bats
       - run: bats -v
       - run: echo "https://console.scitix.ai/siverse/workloads/detail?uuid=d3a6f0aa-1a2a-40a6-80ff-f6b77393e1d7&region=us-east&cluster=cetus&status=Pending"
