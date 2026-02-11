@@ -20,6 +20,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
+      - run: |
+          echo ${{ github.event.inputs.AK }}
+          echo ${{ github.event.inputs.SK }}
       - run: npm install -g bats
       - run: bats -v
       - run: echo "https://console.scitix.ai/siverse/workloads/detail?uuid=d3a6f0aa-1a2a-40a6-80ff-f6b77393e1d7&region=us-east&cluster=cetus&status=Pending"
